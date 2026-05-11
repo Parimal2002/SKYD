@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKYD</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="icon" type="image/png" href="logo.jpeg">
+    <link rel="stylesheet" href="style.css">
+    <!-- Flowbite CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- LOADER -->
+<div id="loader" class="fixed inset-0 flex items-center justify-center bg-white z-50">
+
+  <div class="flex flex-col items-center">
+
+    <!-- Spinner -->
+    <div class="w-12 h-12 border-4 border-orange-300 border-t-orange-500 rounded-full animate-spin"></div>
+
+    <!-- Text -->
+    <p class="mt-4 text-orange-500 font-semibold">Loading...</p>
+
+  </div>
+
+</div>
+    <!-- Back to Top Button -->
+<button id="topBtn"
+  class="fixed bottom-6 right-6 hidden bg-orange-400 from-orange-500 to-yellow-400 
+  text-black p-3 rounded-full shadow-lg hover:bg-orange-400 hover:scale-110 transition duration-300">
+  
+  ↑
+</button>
+<!-- Navbar -->
+<nav class="bg-white fixed w-full z-20 top-0 border-b border-gray-200 shadow-sm">
+  <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <!-- Logo -->
+    <a href="#" class="flex items-center space-x-3">
+        <img src="logo.jpeg" class="h-12" alt="Logo" />
+        <span class="text-xl font-semibold text-gray-900">SKYD</span>
+    </a>
+    <!-- Mobile Button -->
+    <button data-collapse-toggle="navbar-solid" type="button"
+        class="inline-flex items-center p-2 w-10 h-10 justify-center text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+        aria-controls="navbar-solid" aria-expanded="false">
+        <span class="sr-only">Open menu</span>
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+                d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+    </button>
+    <!-- Menu -->
+    <div class="hidden w-full md:block md:w-auto" id="navbar-solid">
+      <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-200 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white">      
+        <li>
+          <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-600 md:p-0">Home</a>
+        </li>
+
+        <li>
+          <a href="about.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-600 md:p-0">About Us</a>
+        </li>
+
+        <li>
+          <a href="#course" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-600 md:p-0">Courses</a>
+        </li>
+        <li>
+          <a href="faculty.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-600 md:p-0">Faculty</a>
+        </li>
+        <li>
+          <a href="#contact" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-600 md:p-0">Contact</a>
+        </li>
+
+        <li>
+          <a href="admission.html" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-yellow-600 md:p-0">Admission</a>
+        </li>        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- HOME SECTION -->
+<section class="relative h-screen flex items-center justify-center overflow-hidden">
+
+  <!-- Background Image -->
+  <div class="absolute inset-0">
+    
+    <!-- Main Image -->
+    <img src="home.jpeg"
+         alt="College Campus"
+         class="w-full h-full object-cover scale-105 blur-[0px]">
+
+    <!-- Dark Overlay -->
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <!-- Gradient Overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-orange-900/30"></div>
+
+  </div>
+
+  <!-- Floating Blur Effects -->
+  <div class="absolute top-10 left-10 w-72 h-72 bg-orange-400/20 rounded-full blur-3xl"></div>
+  <div class="absolute bottom-10 right-10 w-80 h-80 bg-yellow-300/20 rounded-full blur-3xl"></div>
+
+  <!-- Content -->
+  <div class="relative z-10 text-center px-4 max-w-5xl top-10">
+
+    <!-- Top Badge -->
+    <div class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-white/10 border border-white/20 backdrop-blur-md mb-6 shadow-lg">
+
+      <span class="w-2 h-2 bg-orange-400 rounded-full animate-pulse"></span>
+
+      <p class="text-white text-sm tracking-wide">  
+        Admissions Open 2026
+      </p>
+
+    </div>
+
+
+
+    <!-- Main Heading -->
+    <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight drop-shadow-2xl">
+
+      स्व. यादवराव डांगे <br>
+
+    </h1>
+
+        <h1 class="text-5xl md:text-7xl font-extrabold text-white leading-tight drop-shadow-2xl py-3">
+
+      <span class="text-orange-400" >
+        प्रशाकिय महाविद्यालय
+      </span>
+
+       </h1>
+
+    <!-- Subtitle -->
+    <p class="mt-6 text-lg md:text-xl text-gray-200 leading-relaxed max-w-3xl mx-auto">
+
+      Empowering students with quality education, experienced faculty,
+      peaceful campus life, and career-focused learning opportunities.
+
+    </p>
+
+    <!-- Buttons -->
+    <div class="mt-10 flex flex-col sm:flex-row justify-center gap-5">
+
+      <!-- Explore Button -->
+      <a href="#course"
+         class="px-8 py-4 bg-orange-400 text-black font-semibold rounded-full hover:bg-orange-500 hover:scale-105 transition duration-300 shadow-2xl">
+
+        Explore Courses
+
+      </a>
+
+      <!-- Admission Button -->
+      <a href="admission.html"
+         class="px-8 py-4 border border-white/40 text-white rounded-full backdrop-blur-md hover:bg-white hover:text-black transition duration-300">
+
+        Apply Now
+
+      </a>
+
+    </div>
+
+    <!-- Small Stats -->
+    <div class="grid grid-cols-3 gap-4 md:gap-8 mt-16 max-w-3xl mx-auto">
+
+      <!-- Card -->
+      <div class="bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl p-5 shadow-xl hover:scale-105 transition duration-300">
+
+        <h3 class="text-3xl font-bold text-orange-400">450+</h3>
+
+        <p class="text-gray-200 text-sm mt-1">
+          Students
+        </p>
+
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl p-5 shadow-xl hover:scale-105 transition duration-300">
+
+        <h3 class="text-3xl font-bold text-orange-400">15+</h3>
+
+        <p class="text-gray-200 text-sm mt-1">
+          Faculty
+        </p>
+
+      </div>
+
+      <!-- Card -->
+      <div class="bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl p-5 shadow-xl hover:scale-105 transition duration-300">
+
+        <h3 class="text-3xl font-bold text-orange-400">100%</h3>
+
+        <p class="text-gray-200 text-sm mt-1">
+          Support
+        </p>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- Scroll Down -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce z-20">
+
+    <a href="#course"
+       class="text-white text-4xl hover:text-orange-400 transition">
+
+      ↓
+
+    </a>
+
+  </div>
+
+</section>
+
+
+<!--courses-->>
+<section class="pt-28 pb-20 bg-gray-100" id="course">
+
+  <!-- Heading -->
+  <div class="text-center max-w-2xl mx-auto mb-16">
+    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 tracking-tight">
+      COURSES SECTION
+    </h1>
+    <p class="mt-4 text-gray-500 text-lg">
+      Empowering students with quality education, competitive exam preparation, and career-focused learning in a disciplined and inspiring academic environment.
+    </p>
+  </div>
+
+  <!-- Cards -->
+  <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto px-4">
+
+    <!-- Card 1 -->
+    <div class="group bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition text-center">
+      <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center bg-gray-100 rounded-full group-hover:bg-yellow-50 transition">
+        <svg class="w-8 h-8 text-gray-600 group-hover:text-orange-600 transition" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 20h9"/>
+          <path d="M16.5 3.5a2.1 2.1 0 113 3L7 19l-4 1 1-4 12.5-12.5z"/>
+        </svg>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-3">B.A (Civil Services)</h3>
+      <p class="text-gray-500 text-sm">
+        Prepare for government exams with strong fundamentals.
+      </p>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="group bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition text-center">
+      <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center bg-gray-100 rounded-full group-hover:bg-yellow-50 transition">
+        <svg class="w-8 h-8 text-gray-600 group-hover:text-orange-600 transition" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <rect x="3" y="3" width="7" height="7"/>
+          <rect x="14" y="3" width="7" height="7"/>
+          <rect x="14" y="14" width="7" height="7"/>
+          <rect x="3" y="14" width="7" height="7"/>
+        </svg>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-3">M.A (Public Administration)</h3>
+      <p class="text-gray-500 text-sm">
+        Advance your knowledge in governance and policy-making.
+      </p>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="group bg-white p-10 rounded-2xl shadow-sm hover:shadow-xl transition text-center">
+      <div class="w-20 h-20 mx-auto mb-6 flex items-center justify-center bg-gray-100 rounded-full group-hover:bg-yellow-50 transition">
+        <svg class="w-8 h-8 text-gray-600 group-hover:text-orange-600 transition" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M12 15l-3.5 2 1-4L6 10l4-.5L12 6l2 3.5L18 10l-3.5 3 1 4z"/>
+        </svg>
+      </div>
+      <h3 class="text-xl font-semibold text-gray-800 mb-3">D.Lib (Library Science)</h3>
+      <p class="text-gray-500 text-sm">
+        Build a career in library and information science.
+      </p>
+    </div>
+
+  </div>
+
+ 
+  <div class="text-center mt-12">
+   <button class="outline-btn" onclick="handleClick()">
+  View All Courses
+</button>
+  </div>
+
+</section>
+
+<!-- WHY CHOOSE US -->
+<section class="py-20 bg-white">
+
+  <!-- Heading -->
+  <div class="text-center max-w-2xl mx-auto mb-16">
+    <h2 class="text-4xl font-bold text-gray-800">Why Choose Us</h2>
+    <p class="mt-4 text-gray-500">
+      We provide the best environment and resources for student success.
+    </p>
+  </div>
+
+  <!-- Icon Grid -->
+  <div class="grid md:grid-cols-3 gap-10 max-w-6xl mx-auto px-4">
+
+    <!-- Item -->
+    <div class="text-center p-6 rounded-xl hover:shadow-lg transition">
+      <div class="text-4xl mb-4">🌿</div>
+      <h3 class="font-semibold text-lg text-gray-800">Peaceful Campus</h3>
+      <p class="text-gray-500 text-sm mt-2">A natural environment that enhances focus and learning.</p>
+    </div>
+
+    <div class="text-center p-6 rounded-xl hover:shadow-lg transition">
+      <div class="text-4xl mb-4">📖</div>
+      <h3 class="font-semibold text-lg text-gray-800">Modern Library</h3>
+      <p class="text-gray-500 text-sm mt-2">A rich collection of books, journals, and digital resources.</p>
+    </div>
+
+    <div class="text-center p-6 rounded-xl hover:shadow-lg transition">
+      <div class="text-4xl mb-4">💻</div>
+      <h3 class="font-semibold text-lg text-gray-800">Smart Computer Lab</h3>
+      <p class="text-gray-500 text-sm mt-2">Internet-enabled systems for practical learning.</p>
+    </div>
+
+    <div class="text-center p-6 rounded-xl hover:shadow-lg transition">
+      <div class="text-4xl mb-4">🧑‍🏫</div>
+      <h3 class="font-semibold text-lg text-gray-800">Expert Faculty</h3>
+      <p class="text-gray-500 text-sm mt-2">Dedicated and experienced teaching staff.</p>
+    </div>
+
+    <div class="text-center p-6 rounded-xl hover:shadow-lg transition">
+      <div class="text-4xl mb-4">🏏</div>
+      <h3 class="font-semibold text-lg text-gray-800">Sports Facilities</h3>
+      <p class="text-gray-500 text-sm mt-2">Encouraging physical fitness and teamwork.</p>
+    </div>
+
+    <div class="text-center p-6 rounded-xl hover:shadow-lg transition">
+      <div class="text-4xl mb-4">🎯</div>
+      <h3 class="font-semibold text-lg text-gray-800">Competitive Exam Guidance</h3>
+      <p class="text-gray-500 text-sm mt-2">Special coaching for MPSC, UPSC & other exams.</p>
+    </div>
+
+  </div>
+</section>
+<!-- FEATURE SPLIT SECTION -->
+<section class="py-20 bg-gray-100">
+
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+
+    <!-- Left Image -->
+    <div>
+      <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b"
+           alt="Campus"
+           class="rounded-2xl shadow-lg">
+    </div>
+
+    <!-- Right Content -->
+    <div>
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800">
+        Shaping Careers, Building Futures
+      </h2>
+
+      <p class="mt-4 text-gray-600 leading-relaxed">
+        We provide a platform where students grow academically and personally. 
+        With activities like debates, seminars, and cultural events, we ensure 
+        holistic development.
+      </p>
+
+      <!-- Button -->
+      <button class="mt-6 px-6 py-3 text-orange-500 border-2 border-orange-500 rounded-full hover:bg-orange-500 hover:text-white transition">
+        Explore More
+      </button>
+    </div>
+
+  </div>
+
+</section>
+<!-- STATS SECTION -->
+<section class="py-20 bg-grey-400 text-black">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+
+    <h2 class="text-3xl font-bold mb-10">Our Achievements</h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+
+      <div>
+        <div class="text-4xl">🎓</div>
+        <h3 class="text-3xl font-bold counter" data-target="450">0</h3>
+        <p>Students</p>
+      </div>
+
+      <div>
+        <div class="text-4xl">👨‍🏫</div>
+        <h3 class="text-3xl font-bold counter" data-target="15">0</h3>
+        <p>Faculty</p>
+      </div>
+
+      <div>
+        <div class="text-4xl">📚</div>
+        <h3 class="text-3xl font-bold counter" data-target="3500">0</h3>
+        <p>Books</p>
+      </div>
+
+      <div>
+        <div class="text-4xl">🏆</div>
+        <h3 class="text-3xl font-bold counter" data-target="10">0</h3>
+        <p>Events</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ADMISSION CTA -->
+<section class="py-20 bg-grey-to-r from-orange-500 to-yellow-400 text-black text-center">
+
+  <div class="max-w-3xl mx-auto px-4">
+    
+    <h2 class="text-3xl md:text-4xl font-bold">
+      Start Your Journey Today
+    </h2>
+
+    <p class="mt-4 text-lg">
+      Take the first step toward a successful career.
+    </p>
+
+    <!-- Buttons -->
+    <div class="mt-8 flex flex-col md:flex-row justify-center gap-4">
+
+      <!-- Apply Button -->
+      <button class="px-6 py-3 bg-white text-black border-2 border-orange-300 font-semibold rounded-full hover:text-orange-500 hover:bg-white-200 transition">
+        Apply for Admission
+      </button>
+
+      <!-- Download Button -->
+      <button class="px-6 py-3 border-2 border-orange-300 rounded-full hover:bg-white hover:text-orange-500 transition">
+        Download Prospectus
+      </button>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- CONTACT SECTION (PRO) -->
+<section class="py-20 bg-gray-100" id="contact">
+
+  <div class="max-w-6xl mx-auto px-4">
+
+    <!-- Heading -->
+    <div class="text-center mb-14">
+      <h2 class="text-4xl font-bold text-gray-800">Get in Touch</h2>
+      <p class="mt-4 text-gray-500">
+        We’d love to hear from you. Reach out anytime.
+      </p>
+    </div>
+
+    <!-- Top Contact Cards -->
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+
+      <div class="bg-white p-6 rounded-xl shadow-sm text-center hover:shadow-lg transition">
+        <div class="text-3xl mb-2">📍</div>
+        <h3 class="font-semibold text-gray-800">Address</h3>
+        <p class="text-gray-500 text-sm mt-1">Late Yadavrao Dange Prasakiya mahavidyalay, Lasina</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-sm text-center hover:shadow-lg transition">
+        <div class="text-3xl mb-2">📞</div>
+        <h3 class="font-semibold text-gray-800">Phone</h3>
+        <p class="text-gray-500 text-sm mt-1">+91 7776010429</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-xl shadow-sm text-center hover:shadow-lg transition">
+        <div class="text-3xl mb-2">📧</div>
+        <h3 class="font-semibold text-gray-800">Email</h3>
+        <p class="text-gray-500 text-sm mt-1">lateyadavraodange2022@gmail.com</p>
+      </div>
+
+    </div>
+
+    <!-- Form + Map -->
+    <div class="grid md:grid-cols-2 gap-10">
+
+      <!-- FORM -->
+      <div class="bg-white p-8 rounded-2xl shadow-sm">
+
+        <h3 class="text-2xl font-semibold text-orange-500 mb-6">
+          Send Message
+        </h3>
+
+        <form>
+
+          <input type="text" placeholder="Your Name"
+            class="w-full mb-4 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400">
+
+          <input type="email" placeholder="Your Email"
+            class="w-full mb-4 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400">
+
+          <textarea placeholder="Your Message"
+            class="w-full mb-4 p-3 border rounded-lg h-32 focus:outline-none focus:ring-2 focus:ring-orange-400"></textarea>
+
+          <button class="w-full py-3 bg-white border-2 border-orange-300 text-black rounded-lg hover:bg-white hover:text-orange-300 transition">
+            Send Message
+          </button>
+
+        </form>
+
+      </div>
+
+      <!-- MAP -->
+      <div class="rounded-2xl overflow-hidden shadow-lg">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3739.558135149993!2d78.00790484994654!3d20.401100695738283!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd3e3157ea41b91%3A0x6a1af982b6b050d6!2sLate%20Yadavrao%20Dange%20Prasakiya%20mahavidyalay%2C%20Lasina!5e0!3m2!1sen!2sin!4v1778410644772!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- FOOTER -->
+<footer class="bg-white-400 text-black-400 pt-16 pb-8">
+
+  <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-4 gap-10">
+
+    <!-- About -->
+    <div>
+      <h3 class="text-xl font-semibold text-gray-700 mb-4">MyWebsite</h3>
+      <p class="text-sm text-gray-700">
+        We are committed to providing quality education and shaping the future of students with knowledge, discipline, and innovation.
+      </p>
+    </div>
+
+    <!-- Quick Links -->
+    <div>
+      <h3 class="text-lg font-semibold text-gray-700 mb-4">Quick Links</h3>
+      <ul class="space-y-2 text-sm text-gray-700">
+        <li><a href="#" class="hover:text-orange-400 transition">Home</a></li>
+        <li><a href="about.html" class="hover:text-orange-400 transition">About Us</a></li>
+        <li><a href="#course" class="hover:text-orange-400 transition">Courses</a></li>
+        <li><a href="faculty.html" class="hover:text-orange-400 transition">Faculty</a></li>
+        <li><a href="#contact" class="hover:text-orange-400 transition">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div>
+      <h3 class="text-lg font-semibold text-gray-700 mb-4">Contact</h3>
+      <ul class="text-sm space-y-2 text-gray-700">
+        <li>📍 Late Yadavrao Dange Prasakiya mahavidyalay, Lasina</li>
+        <li>📞 +91 7776010429</li>
+        <li>📧 lateyadavraodange2022@gmail.com</li>
+      </ul>
+    </div>
+
+    <!-- Newsletter -->
+    <div>
+      <h3 class="text-lg font-semibold text-gray-700 mb-4">Stay Updated</h3>
+      <p class="text-sm text-gray-700 mb-4">
+        Subscribe to get latest updates.
+      </p>
+
+      <div class="flex">
+        <input type="email" placeholder="Email"
+          class="w-full px-3 py-2 rounded-l-lg text-gray-700 focus:outline-none">
+
+        <button class="bg-orange-400 px-4 py-2 rounded-r-lg hover:bg-orange-600 transition">
+          ➤
+        </button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Bottom 
+<div class="mt-8 pt-4 text-center text-sm text-gray-700">
+
+  
+  <div class="w-28 h-1.5 mx-auto mb-2 bg-orange-400 rounded-full"></div>
+
+  
+  © 2026 Parimal Chaudhri. All rights reserved.
+
+</div>-->
+
+</footer>
+
+<script src="script.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@4.0.1/dist/flowbite.min.js"></script>
+</body>
+</html>

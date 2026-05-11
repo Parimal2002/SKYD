@@ -1,0 +1,19 @@
+
+.outline-btn {
+  padding: 12px 28px;
+  font-size: 16px;
+  font-weight: 500;
+  color: black;
+  background: transparent;
+  border: 2px solid #ffb638;
+  border-radius: 40px; /* fully rounded */
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.outline-btn:hover {
+  /*background-color: #ffcca8;*/
+  color: #F2A92C;
+  box-shadow: #fbac25;
+}
