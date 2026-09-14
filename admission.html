@@ -1,273 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
-  <title>Admission Form</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-
-  <style>
-    @keyframes bounce {
-      0%,100% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(10px);
-      }
-    }
-
-    .arrow {
-      animation: bounce 1.5s infinite;
-    }
-  </style>
-</head>
-
-<body class="bg-gray-100">
-
-<!-- HERO -->
-<section class="py-20 text-center bg-gradient-to-r from-orange-500 to-yellow-400 text-white">
-  <h1 class="text-4xl md:text-5xl font-bold">
-    Admission Open 2026
-  </h1>
-
-  <p class="mt-4 text-lg">
-    Start your journey toward a successful career today
-  </p>
-</section>
-
-<!-- PROCESS -->
-<section class="py-20 px-4">
-  <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-
-    <!-- Step 1 -->
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition relative">
-      <div class="text-3xl mb-3">📝</div>
-
-      <h3 class="font-semibold text-lg">
-        Fill Form
-      </h3>
-
-      <p class="text-sm text-gray-500 mt-1">
-        Complete application form
-      </p>
-
-      <span class="hidden md:block absolute right-[-20px] top-1/2 -translate-y-1/2 text-2xl text-orange-400 arrow">
-        →
-      </span>
-    </div>
-
-    <!-- Step 2 -->
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition relative">
-      <div class="text-3xl mb-3">📄</div>
-
-      <h3 class="font-semibold text-lg">
-        Submit Documents
-      </h3>
-
-      <p class="text-sm text-gray-500 mt-1">
-        Upload required documents
-      </p>
-
-      <span class="hidden md:block absolute right-[-20px] top-1/2 -translate-y-1/2 text-2xl text-orange-400 arrow">
-        →
-      </span>
-    </div>
-
-    <!-- Step 3 -->
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition relative">
-      <div class="text-3xl mb-3">💳</div>
-
-      <h3 class="font-semibold text-lg">
-        Pay Fees
-      </h3>
-
-      <p class="text-sm text-gray-500 mt-1">
-        Complete payment process
-      </p>
-
-      <span class="hidden md:block absolute right-[-20px] top-1/2 -translate-y-1/2 text-2xl text-orange-400 arrow">
-        →
-      </span>
-    </div>
-
-    <!-- Step 4 -->
-    <div class="bg-white p-6 rounded-xl shadow hover:shadow-lg transition">
-      <div class="text-3xl mb-3">🎓</div>
-
-      <h3 class="font-semibold text-lg">
-        Admission Confirmed
-      </h3>
-
-      <p class="text-sm text-gray-500 mt-1">
-        Welcome to college 🎉
-      </p>
-    </div>
-
-  </div>
-</section>
-
-<!-- FORM SECTION -->
-<section class="py-20 bg-white">
-  <div class="max-w-4xl mx-auto px-4">
-
-    <h2 class="text-3xl font-bold text-center text-gray-800 mb-10">
-      Apply for Admission
-    </h2>
-
-    <!-- SUCCESS MESSAGE -->
-    <div 
-      id="successMessage"
-      class="hidden mb-6 bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg text-center font-medium"
-    >
-      ✅ Form submitted successfully!
-    </div>
-
-    <!-- FORM -->
-    <form 
-      id="admissionForm"
-      class="grid md:grid-cols-2 gap-6"
-    >
-
-      <!-- Hidden Fields -->
-      <input type="hidden" name="_captcha" value="false">
-
-      <input type="hidden" name="_subject" value="New Admission Form Submission">
-
-      <input type="hidden" name="_template" value="table">
-
-      <!-- Name -->
-      <input
-        type="text"
-        name="Full Name"
-        placeholder="Full Name"
-        required
-        class="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
-      >
-
-      <!-- Email -->
-      <input
-        type="email"
-        name="Email"
-        placeholder="Email Address"
-        required
-        class="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
-      >
-
-      <!-- Phone -->
-      <input
-        type="tel"
-        name="Phone"
-        placeholder="Phone Number"
-        required
-        class="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
-      >
-
-      <!-- Course -->
-      <select
-        name="Course"
-        required
-        class="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
-      >
-        <option value="">Select Course</option>
-        <option>B.A (Civil Services)</option>
-        <option>M.A (Public Administration)</option>
-        <option>D.Lib (Library Science)</option>
-      </select>
-
-      <!-- Address -->
-      <textarea
-        name="Address"
-        rows="4"
-        placeholder="Address"
-        class="md:col-span-2 p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-400"
-      ></textarea>
-
-      <!-- Submit Button -->
-      <button
-        type="submit"
-        id="submitBtn"
-        class="md:col-span-2 py-3 bg-gradient-to-r from-orange-500 to-yellow-400 text-white font-semibold rounded-lg hover:opacity-90 transition"
-      >
-        Submit Application
-      </button>
-
-    </form>
-
-  </div>
-</section>
-
-<!-- FOOTER 
-<footer class="bg-gray-900 text-white py-6 text-center">
-  <p>
-    © 2026 Admission Portal. All Rights Reserved.
-  </p>
-</footer>-->
-
-<!-- JAVASCRIPT -->
-<script>
-
-const form = document.getElementById("admissionForm");
-const successMessage = document.getElementById("successMessage");
-const submitBtn = document.getElementById("submitBtn");
-
-form.addEventListener("submit", async function(e) {
-
-  e.preventDefault();
-
-  submitBtn.innerHTML = "Submitting...";
-  submitBtn.disabled = true;
-
-  const formData = new FormData(form);
-
-  try {
-
-    const response = await fetch(
-      "https://formsubmit.co/ajax/lateyadavraodange2022@gmail.com",
-      {
-        method: "POST",
-        headers: {
-          'Accept': 'application/json'
-        },
-        body: formData
-      }
-    );
-
-    if (response.ok) {
-
-      successMessage.classList.remove("hidden");
-
-      form.reset();
-
-      submitBtn.innerHTML = "Submit Application";
-      submitBtn.disabled = false;
-
-      setTimeout(() => {
-        successMessage.classList.add("hidden");
-      }, 5000);
-
-    } else {
-
-      alert("Failed to submit form");
-
-      submitBtn.innerHTML = "Submit Application";
-      submitBtn.disabled = false;
-
-    }
-
-  } catch (error) {
-
-    alert("Something went wrong!");
-
-    submitBtn.innerHTML = "Submit Application";
-    submitBtn.disabled = false;
-
-  }
-
-});
-
-</script>
-
-</body>
-</html>
+<html lang="en" class="scroll-smooth">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Apply online for admission to LYD College, Lasina."><title>Admission 2026 | LYD College</title><link rel="icon" href="logo.jpeg"><script src="https://cdn.tailwindcss.com"></script><link rel="stylesheet" href="style.css"></head>
+<body>
+  <nav id="siteNav" class="site-nav"><div class="mx-auto flex max-w-7xl flex-wrap items-center justify-between px-5 py-3"><a href="index.html" class="flex items-center gap-3"><img src="logo.jpeg" class="h-12 w-12 rounded-xl object-cover" alt="LYD College logo"><div><span class="brand-name block text-lg font-extrabold">LYD College</span><small class="text-[10px] font-bold uppercase tracking-[.18em] text-amber-400">Lasina</small></div></a><button data-collapse-toggle="navbar-solid" class="menu-icon grid h-11 w-11 place-items-center rounded-xl border border-white/15 md:hidden" aria-label="Open navigation" aria-expanded="false"><svg class="h-6 w-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16"/></svg></button><div id="navbar-solid" class="hidden w-full md:block md:w-auto"><ul class="flex flex-col gap-1 md:flex-row md:items-center md:gap-8"><li><a class="nav-link" href="index.html">Home</a></li><li><a class="nav-link" href="about.html">About</a></li><li><a class="nav-link" href="course.html">Courses</a></li><li><a class="nav-link" href="faculty.html">Faculty</a></li><li><a class="nav-link" href="index.html#contact">Contact</a></li><li><a class="btn-primary !min-h-0 !px-5 !py-2.5" href="admission.html">Apply now</a></li></ul></div></div></nav>
+
+  <main>
+    <header class="inner-hero"><div class="section-shell"><span class="section-label !text-amber-400">Admissions 2026</span><h1>Take the first step toward<br><span class="text-amber-400">your next chapter.</span></h1><p class="max-w-2xl leading-8 text-slate-300">Complete the application below. Our admission team will contact you with the next steps and document requirements.</p></div></header>
+
+    <section class="section-space"><div class="section-shell"><div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="soft-card reveal p-6"><span class="text-xs font-extrabold text-amber-600">STEP 01</span><div class="mt-4 text-3xl">📝</div><h3 class="mt-3 text-lg font-extrabold">Fill the form</h3><p class="mt-2 text-sm text-slate-500">Share your contact and course details.</p></div>
+      <div class="soft-card reveal p-6"><span class="text-xs font-extrabold text-amber-600">STEP 02</span><div class="mt-4 text-3xl">📄</div><h3 class="mt-3 text-lg font-extrabold">Submit documents</h3><p class="mt-2 text-sm text-slate-500">Provide the required academic records.</p></div>
+      <div class="soft-card reveal p-6"><span class="text-xs font-extrabold text-amber-600">STEP 03</span><div class="mt-4 text-3xl">💳</div><h3 class="mt-3 text-lg font-extrabold">Pay fees</h3><p class="mt-2 text-sm text-slate-500">Complete payment after verification.</p></div>
+      <div class="soft-card reveal p-6"><span class="text-xs font-extrabold text-amber-600">STEP 04</span><div class="mt-4 text-3xl">🎓</div><h3 class="mt-3 text-lg font-extrabold">Join LYD</h3><p class="mt-2 text-sm text-slate-500">Receive confirmation and begin learning.</p></div>
+    </div></div></section>
+
+    <section class="section-space bg-white pt-0"><div class="section-shell grid gap-10 lg:grid-cols-[.72fr_1.28fr]">
+      <aside class="dark-panel reveal h-fit rounded-[2rem] p-8 sm:p-10"><span class="section-label !text-amber-400">Need help?</span><h2 class="mt-4 text-3xl font-extrabold">We’re here for you.</h2><p class="mt-4 leading-7 text-slate-300">Contact the college if you need guidance before submitting your application.</p><div class="mt-8 space-y-6 text-sm"><p><b class="block text-amber-400">Phone</b><a href="tel:+917776010429">+91 77760 10429</a></p><p><b class="block text-amber-400">Email</b><a class="break-all" href="mailto:lateyadavraodange2022@gmail.com">lateyadavraodange2022@gmail.com</a></p><p><b class="block text-amber-400">Campus</b>Late Yadavrao Dange Prashaskiya Mahavidyalaya, Lasina</p></div><div class="mt-9 rounded-2xl border border-white/10 bg-white/5 p-5 text-sm leading-6 text-slate-300"><b class="text-white">Before you submit</b><br>Check your name, phone number, email and selected course carefully.</div></aside>
+      <div class="soft-card reveal p-7 sm:p-10"><span class="section-label">Application form</span><h2 class="mt-3 text-3xl font-extrabold">Tell us about yourself</h2><p class="section-copy mt-3">Fields marked with * are required.</p>
+        <div id="successMessage" class="mt-7 hidden rounded-xl border border-emerald-200 bg-emerald-50 p-4 font-bold text-emerald-700" role="status">✓ Your application was submitted successfully. Our team will contact you soon.</div>
+        <form id="admissionForm" class="mt-8 grid gap-6 md:grid-cols-2">
+          <input type="hidden" name="_captcha" value="false"><input type="hidden" name="_subject" value="New LYD College Admission Application"><input type="hidden" name="_template" value="table">
+          <label><span class="form-label">Full name *</span><input class="form-control" type="text" name="Full Name" placeholder="Enter full name" required autocomplete="name"></label>
+          <label><span class="form-label">Email address *</span><input class="form-control" type="email" name="Email" placeholder="name@example.com" required autocomplete="email"></label>
+          <label><span class="form-label">Phone number *</span><input class="form-control" type="tel" name="Phone" placeholder="10-digit mobile number" pattern="[0-9]{10}" maxlength="10" required autocomplete="tel"></label>
+          <label><span class="form-label">Date of birth</span><input class="form-control" type="date" name="Date of Birth"></label>
+          <label class="md:col-span-2"><span class="form-label">Course *</span><select class="form-control" name="Course" required><option value="">Choose a course</option><option>B.A. (Civil Services)</option><option>M.A. (Public Administration)</option><option>D.Lib. (Library Science)</option></select></label>
+          <label class="md:col-span-2"><span class="form-label">Address</span><textarea class="form-control min-h-32 resize-y" name="Address" placeholder="Enter your complete address"></textarea></label>
+          <label class="md:col-span-2 flex items-start gap-3 text-sm text-slate-600"><input class="mt-1 accent-amber-500" type="checkbox" required><span>I confirm that the information entered above is correct.</span></label>
+          <button id="submitBtn" class="btn-primary md:col-span-2" type="submit">Submit application →</button>
+        </form>
+      </div>
+    </div></section>
+  </main>
+
+  <footer class="bg-slate-950 px-5 py-10 text-center text-sm text-slate-400"><div class="mb-4 flex items-center justify-center gap-3"><img src="logo.jpeg" class="h-10 w-10 rounded-lg object-cover" alt="LYD logo"><strong class="text-lg text-white">LYD College</strong></div><p>Late Yadavrao Dange Prashaskiya Mahavidyalaya, Lasina</p><p class="mt-5 border-t border-white/10 pt-5">© 2026 LYD College. All rights reserved.</p></footer>
+  <button id="topBtn" class="fixed bottom-6 right-6 grid h-12 w-12 place-items-center rounded-full bg-amber-500 font-extrabold shadow-xl" aria-label="Back to top">↑</button><script src="script.js"></script>
+</body></html>
